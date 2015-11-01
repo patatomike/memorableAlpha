@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+body{
+  	padding-top:50px; /*padding for navbar*/
+}
+
+.navbar-custom .icon-bar {
+	background-color:#E24A37;
+}
+
+.navbar-custom {
+	background-color: #F2EEEA;
+    color:#E24A37;
+}
+
+.navbar-custom li>a:hover,.navbar-custom li>a:focus {
+	background-color:#E87162;
+    color:#F2EEEA;
+}
+
+.navbar-custom a{
+    color:#E87162;
+}
+
+.navbar-custom .form-control:focus {
+	border-color: #F2EEEA;
+	outline: 0;
+	-webkit-box-shadow: inset 0 0 0;
+	box-shadow: inset 0 0 0;
+}
+.nopadding{
+  padding:0 !important;
+  margin:0 !important;
+}
+
+
+/************MAP*******************/
+
+div.map_container {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 300px;
+}
+
+.angular-google-map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+div.controls {
+    float: right;
+    width: 30%;
+}
+
+.markerlabel {
+    font-weight: bold;
+    font-size: 13px;
+    border: 1px solid #333;
+    padding: 2px;
+    background: #fff;
+    color: #333;
+}
+
+h3 {
+    margin: 0 20px;
+}
+
+p {
+    margin-top: 20px;
+    padding: 0 0 50px 20px;
+}
