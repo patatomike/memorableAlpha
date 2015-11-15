@@ -60,6 +60,16 @@ var app = {
             'Heading: '           + position.coords.heading           + '\n' +
             'Speed: '             + position.coords.speed             + '\n' +
             'Timestamp: '         + position.timestamp                + '\n');
+
+            var myLatlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+
+            var marker = new google.maps.Marker({
+              position: myLatlng,
+              title:"Hello you!"
+            });
+
+
+            marker.setMap(map);
           };
 
 
