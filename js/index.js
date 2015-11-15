@@ -26,44 +26,41 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, true);
+        document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-      // angular.element(document).ready(function() {
-      //   angular.bootstrap(document);
-      // });
         app.receivedEvent('deviceready');
-     },
+    },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        // var parentElement = document.getElementById(id);
-        // var listeningElement = parentElement.querySelector('.listening');
-        // var receivedElement = parentElement.querySelector('.received');
-        //
-        // listeningElement.setAttribute('style', 'display:none;');
-        // receivedElement.setAttribute('style', 'display:block;');
-        //
-        // /* position Singapore */
-        //   var latlng = new google.maps.LatLng(1.3203784, 103.7529035);
-        //
-        // var mapOptions = {
-        //   center: latlng,
-        //   scrollWheel: false,
-        //   zoom: 13
-        // };
-        //
-        // var marker = new google.maps.Marker({
-        //   position: latlng,
-        //   url: '/',
-        //   animation: google.maps.Animation.DROP
-        // });
-        //
-        // var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-        // marker.setMap(map);
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
+
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
+        /* position Singapore */
+          var latlng = new google.maps.LatLng(1.3203784, 103.7529035);
+
+        var mapOptions = {
+          center: latlng,
+          scrollWheel: false,
+          zoom: 13
+        };
+
+        var marker = new google.maps.Marker({
+          position: latlng,
+          url: '/',
+          animation: google.maps.Animation.DROP
+        });
+
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        marker.setMap(map);
 
 
         console.log('Received Event: ' + id);

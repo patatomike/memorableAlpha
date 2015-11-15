@@ -1,7 +1,6 @@
 angular.module('App', ['ngRoute', 'App.services', 'App.controllers', 'google-maps'])
       .config(['$compileProvider', function ($compileProvider) {
-        //  $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel|chrome-extension):/);
-         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel|chrome-extension):/); // ***newwer version
+         $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
      }])
     .config(function ($routeProvider) {
         $routeProvider
@@ -13,5 +12,5 @@ angular.module('App', ['ngRoute', 'App.services', 'App.controllers', 'google-map
             controller: 'PointOfInterestsController',
             templateUrl: 'partials/memorableLIVE.html'
         })
-        .otherwise({redirectTo: '/'});
+        .otherwise({redirectTo: ''});
     });
