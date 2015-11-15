@@ -4,7 +4,7 @@ angular.module('App', ['ngRoute', 'App.services', 'App.controllers', 'google-map
     // }])
     .config(function ($routeProvider) {
         $routeProvider
-        .when('/', {
+        .when('', {
             controller: 'PointOfInterestsController',
             templateUrl: 'partials/memorableNOW.html'
         })
@@ -12,5 +12,5 @@ angular.module('App', ['ngRoute', 'App.services', 'App.controllers', 'google-map
             controller: 'PointOfInterestsController',
             templateUrl: 'partials/memorableLIVE.html'
         })
-        .otherwise({redirectTo: '/'});
+        .otherwise({redirectTo: ''});
     });
