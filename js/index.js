@@ -50,25 +50,9 @@ var app = {
 
         var transitLayer = new google.maps.TransitLayer();
         transitLayer.setMap(map);
-
-        var myloc = new google.maps.Marker({
-          clickable: false,
-          icon: new google.maps.MarkerImage('//maps.gstatic.com/mapfiles/mobile/mobileimgs2.png',
-                new google.maps.Size(22,22),
-                new google.maps.Point(0,18),
-                new google.maps.Point(11,11)),
-                shadow: null,
-                zIndex: 999,
-                map: // your google.maps.Map object
-        });
-
-        if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(pos) {
-          var me = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-          myloc.setPosition(me);
-        }, function(error) {
-          // ...
-        });
-
+        var geo = cordova.require('cordova/plugin/geolocation');
+        geo.getCurrentPosition(win, fail,opts);
+        console.log(win);
 
         map.initialize();
 
