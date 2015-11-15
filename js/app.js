@@ -1,4 +1,4 @@
-angular.module('App', ['ngRoute', 'App.services', 'App.controllers', 'google-maps'])
+angular.module('App', ['ngRoute', 'App.services', 'App.controllers'])
       .config(['$compileProvider', function ($compileProvider) {
         //  $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel|chrome-extension):/);
          $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel|chrome-extension):/); // ***newwer version
