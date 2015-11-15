@@ -41,36 +41,43 @@ var app = {
      },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        // var parentElement = document.getElementById(id);
-        // var listeningElement = parentElement.querySelector('.listening');
-        // var receivedElement = parentElement.querySelector('.received');
-        //
-        // listeningElement.setAttribute('style', 'display:none;');
-        // receivedElement.setAttribute('style', 'display:block;');
-        //
-        // /* position Singapore */
-        //   var latlng = new google.maps.LatLng(1.3203784, 103.7529035);
-        //
-        // var mapOptions = {
-        //   center: latlng,
-        //   scrollWheel: false,
-        //   zoom: 13
-        // };
-        //
-        // var marker = new google.maps.Marker({
-        //   position: latlng,
-        //   url: '/',
-        //   animation: google.maps.Animation.DROP
-        // });
-        //
-        // var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-        // marker.setMap(map);
 
 
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 12,
             center: {lat: 1.290299, lng: 103.850143}
           });
+
+        var transitLayer = new google.maps.TransitLayer();
+        transitLayer.setMap(map);
+
+        // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      var infoWindow = new google.maps.InfoWindow({map: map});
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Hello you.');
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+                        'Error: The Geolocation service failed.' :
+                        'Error: Your browser doesn\'t support geolocation.');
+}
+
 
         map.initialize();
 
