@@ -66,12 +66,12 @@ var app = {
         // marker.setMap(map);
 
         var map;
-        function initMap() {
+
           map = new google.maps.Map(document.getElementById('map'), {
             zoom: 12,
             center: {lat: 1.290299, lng: 103.850143}
           });
-        }  
+
 
         console.log('Received Event: ' + id);
     }
