@@ -37,6 +37,8 @@ var app = {
       //   angular.bootstrap(document);
       // });
         app.receivedEvent('deviceready');
+        var map = new GoogleMap();
+        map.initialize();
      },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -65,12 +67,7 @@ var app = {
         // var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         // marker.setMap(map);
 
-        var map;
 
-          map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12,
-            center: {lat: 1.290299, lng: 103.850143}
-          });
 
 
         console.log('Received Event: ' + id);
