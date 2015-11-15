@@ -71,7 +71,7 @@ var app = {
             zoom: 12,
             center: {lat: 1.290299, lng: 103.850143}
           });
-        }       
+        }  
 
         console.log('Received Event: ' + id);
     }

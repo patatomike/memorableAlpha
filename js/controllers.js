@@ -8,13 +8,7 @@ angular.module('App.controllers', [])
               { img: 'http://www.roomsbooking.com/wp-content/uploads/2014/11/Singapore-Night-Markets.jpg', distance: '500m', direction: 'SE' }
             ];
 
-            var map;
-            function initMap() {
-              map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: {lat: 1.290299, lng: 103.850143}
-              });
-            }      
+                
       //
       // $scope.map = {
       //     center: {
