@@ -9,25 +9,25 @@ body{
 }
 
 .navbar-custom .icon-bar {
-	background-color:#E24A37;
+	background-color:#FCFCFC;
 }
 
 .navbar-custom {
-	background-color: #F2EEEA;
-    color:#E24A37;
+	background-color: #222;
+    color:#FCFCFC;
 }
 
 .navbar-custom li>a:hover,.navbar-custom li>a:focus {
-	background-color:#E87162;
-    color:#F2EEEA;
+	background-color:##FCFCFC;
+    color:#222;
 }
 
 .navbar-custom a{
-    color:#E87162;
+    color:##FCFCFC;
 }
 
 .navbar-custom .form-control:focus {
-	border-color: #F2EEEA;
+	border-color: #222;
 	outline: 0;
 	-webkit-box-shadow: inset 0 0 0;
 	box-shadow: inset 0 0 0;
@@ -37,6 +37,11 @@ body{
   margin:0 !important;
 }
 
+.img-logo{
+  height:150%;
+  margin-top:-5px;
+
+}
 
 /************MAP*******************/
 

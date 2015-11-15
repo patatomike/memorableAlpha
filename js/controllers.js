@@ -10,8 +10,8 @@ angular.module('App.controllers', [])
 
       $scope.map = {
           center: {
-              latitude:-1,
-              longitude:12
+              latitude:1.274213,
+              longitude:103.8420383
           },
           zoom: 12,
           options: {
