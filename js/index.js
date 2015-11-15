@@ -63,11 +63,12 @@ var app = {
 
             var myLatlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 
+            var image = 'img/TrackingDot.png';
             var marker = new google.maps.Marker({
               position: myLatlng,
+              icon: image,
               title:"Hello you!"
             });
-
 
             marker.setMap(map);
           };
