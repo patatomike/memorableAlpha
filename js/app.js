@@ -1,7 +1,7 @@
 angular.module('App', ['ngRoute', 'App.services', 'App.controllers'])
       .config(['$compileProvider', function ($compileProvider) {
         //  $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel|chrome-extension):/);
-         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel|chrome-extension):/); // ***newwer version
+         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|http|ftp|mailto|file|tel|chrome-extension):/); // ***newwer version
      }])
     .config(function ($routeProvider) {
         $routeProvider
