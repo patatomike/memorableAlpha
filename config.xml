@@ -55,6 +55,9 @@
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <allow-navigation href="*" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.12" />
+
+
     <access origin="*" />
     <content src="index.html" />
     <gap:config-file platform="android" parent="/manifest">

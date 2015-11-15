@@ -50,9 +50,28 @@ var app = {
 
         var transitLayer = new google.maps.TransitLayer();
         transitLayer.setMap(map);
-        var geo = cordova.require('cordova/plugin/geolocation');
-        geo.getCurrentPosition(win, fail,opts);
-        console.log(win);
+
+        var onSuccess = function(position) {
+        console.log('Latitude: '          + position.coords.latitude          + '\n' +
+            'Longitude: '         + position.coords.longitude         + '\n' +
+            'Altitude: '          + position.coords.altitude          + '\n' +
+            'Accuracy: '          + position.coords.accuracy          + '\n' +
+            'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+            'Heading: '           + position.coords.heading           + '\n' +
+            'Speed: '             + position.coords.speed             + '\n' +
+            'Timestamp: '         + position.timestamp                + '\n');
+          };
+
+
+          function onError(error) {
+            console.log('code: '    + error.code    + '\n' +
+            'message: ' + error.message + '\n');
+          }
+
+          navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+
+
 
         map.initialize();
 
