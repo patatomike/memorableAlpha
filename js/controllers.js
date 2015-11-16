@@ -6,7 +6,7 @@ angular.module('App.controllers', [])
         // serviceMap.getPlaces(latitude,longitude,distance);
         serviceMap.getPlaces(1.300529,103.861990,2000).success(function(data){
           console.log(data);
-        }
+        });
 
         $scope.pointOfInterests = [
               { img: 'img/sg-005.jpg', distance: '200m', direction: 'NW' },
