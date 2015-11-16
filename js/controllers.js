@@ -11,7 +11,7 @@ angular.module('App.controllers', [])
 
         // call factory to retrieve place nearby
         serviceMap.getPlaces(1.300529,103.861990,2500).success(function(data){
-          console.log(data[0].doc[0].photos[0].path);
+          console.log(data[0].doc.photos[0].path);
 
 
 
