@@ -3,10 +3,13 @@ angular.module('App.controllers', [])
         $scope.status = "It works!";
 
         // call factory to retrieve place nearby
-        // serviceMap.getPlaces(latitude,longitude,distance);
-        serviceMap.getPlaces(1.300529,103.861990,2000).success(function(data){
-          console.log(data);
-        });
+        // serviceMap.getPlaces(1.300529,103.861990,2000).success(function(data){
+        //   console.log(data);
+        // });
+
+        console.log($http.get('https://memorablebackend.herokuapp.com/api/places/1.300529/103.861990/2000'));
+
+
 
         $scope.pointOfInterests = [
               { img: 'img/sg-005.jpg', distance: '200m', direction: 'NW' },
