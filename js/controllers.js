@@ -1,5 +1,5 @@
 angular.module('App.controllers', [])
-    .controller('PointOfInterestsController', ['$scope', '$http', function ($scope, serviceMap,$http) {
+    .controller('PointOfInterestsController', function ($scope, serviceMap,$http) {
         $scope.status = "It works!";
 
         // call factory to retrieve place nearby
@@ -7,7 +7,7 @@ angular.module('App.controllers', [])
         //   console.log(data);
         // });
 
-        console.log($http.get('https://memorablebackend.herokuapp.com/api/places/1.300529/103.861990/2000'));
+        // console.log($http.get('https://memorablebackend.herokuapp.com/api/places/1.300529/103.861990/2000'));
 
 
 
@@ -19,21 +19,7 @@ angular.module('App.controllers', [])
             ];
 
 
-
-
-      //
-      // $scope.map = {
-      //     center: {
-      //         latitude:1.274213,
-      //         longitude:103.8420383
-      //     },
-      //     zoom: 12,
-      //     options: {
-      //         scrollwheel: false
-      //     }
-      // };
-
-    }])
+    })
     .controller('ViewCtrl', ['$scope', function ($scope) {
         $scope.status = "Also totally works!";
     }]);

@@ -25,7 +25,6 @@ angular.module('App.services', [])
           }
       }
     })
-
     .factory('MarkerCreatorService', function () {
 
     var markerId = 0;
