@@ -1,11 +1,11 @@
 angular.module('App.controllers', [])
-    .controller('PointOfInterestsController', function ($scope, serviceMap,$http) {
+    .controller('PointOfInterestsController', function ($scope, serviceMap ,$http) {
         $scope.status = "It works!";
 
         // call factory to retrieve place nearby
-        // serviceMap.getPlaces(1.300529,103.861990,2000).success(function(data){
-        //   console.log(data);
-        // });
+        serviceMap.getPlaces(1.300529,103.861990,2000).success(function(data){
+          console.log(data);
+        });
 
         // console.log($http.get('https://memorablebackend.herokuapp.com/api/places/1.300529/103.861990/2000'));
 
