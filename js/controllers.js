@@ -12,10 +12,10 @@ angular.module('App.controllers', [])
 
 
         $scope.pointOfInterests = [
-              { img: 'img/sg-005.jpg', distance: '200m', direction: 'NW' },
-              { img: 'http://www.roomsbooking.com/wp-content/uploads/2014/11/Merloin-Park-Singapore.jpg', distance: '600m', direction: 'NE' },
-              { img: 'http://www.travelandleis  ure.com/sites/default/files/styles/weekend_getaways_landing_page/public/singapore19650815-005.jpg?itok=VeA42doQ', distance: '100m', direction: 'SW' },
-              { img: 'http://www.roomsbooking.com/wp-content/uploads/2014/11/Singapore-Night-Markets.jpg', distance: '500m', direction: 'SE' }
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/buddha_tooth_relic_temple_and_museum.jpg', distance: '200m', direction: 'NW' },
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/merlion_park.jpg', distance: '600m', direction: 'NE' },
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/chinatown_singapore.jpg', distance: '100m', direction: 'SW' },
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/marina_bay_sands.jpg', distance: '500m', direction: 'SE' }
             ];
 
 
