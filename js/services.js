@@ -18,6 +18,14 @@ angular.module('App.services', [])
             };
         };
     }])
+    .factory('serviceMap', function serviceMap($http) {
+      return{
+          getPlaces: function(latitude,longitude,distance){
+              return $http.get("https://memorablebackend.herokuapp.com/api/places/"+latitude+"/"+longitude+"/"+distance);
+          }
+      }
+    })
+
     .factory('MarkerCreatorService', function () {
 
     var markerId = 0;
