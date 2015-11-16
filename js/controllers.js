@@ -4,21 +4,21 @@ angular.module('App.controllers', [])
 
         $scope.pointOfInterests = [
               { img: 'https://s3-us-west-1.amazonaws.com/memorable/buddha_tooth_relic_temple_and_museum.jpg', distance: '200m', direction: 'NW' },
-              { img: 'https://s3-us-west-1.amazonaws.com/memorable/merlion_park.jpg', distance: '600m', direction: 'NE' },
-              { img: 'https://s3-us-west-1.amazonaws.com/memorable/chinatown_singapore.jpg', distance: '100m', direction: 'SW' },
-              { img: 'https://s3-us-west-1.amazonaws.com/memorable/marina_bay_sands.jpg', distance: '500m', direction: 'SE' }
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/chinatown_singapore.jpg', distance: '600m', direction: 'NE' },
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/marina_bay_sands.jpg', distance: '100m', direction: 'SW' },
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/merlion_park.jpg', distance: '500m', direction: 'SE' }
             ];
 
-        // call factory to retrieve place nearby
-        serviceMap.getPlaces(1.300529,103.861990,2000).success(function(data){
-          console.log(data);
-
-          // for (var i = 0; i < data.length; i++) {
-          //   // data[i].distance
-          //   // markers.push(createMarker(data[i].latitude, data[i].longitude, data[i].place, i));
-          //   // //  places.push(data[i].place)
-          // }
-        });
+        // // call factory to retrieve place nearby
+        // serviceMap.getPlaces(1.300529,103.861990,2000).success(function(data){
+        //   console.log(data);
+        //
+        //   // for (var i = 0; i < data.length; i++) {
+        //   //   // data[i].distance
+        //   //   // markers.push(createMarker(data[i].latitude, data[i].longitude, data[i].place, i));
+        //   //   // //  places.push(data[i].place)
+        //   // }
+        // });
 
 
         var map = new google.maps.Map(document.getElementById('map'), {
