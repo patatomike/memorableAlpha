@@ -8,6 +8,11 @@ body{
   	padding-top:50px; /*padding for navbar*/
 }
 
+a:hover, a:focus {
+    color: #2a2a2a;
+    text-decoration: none;
+}
+
 .navbar-custom .icon-bar {
 	background-color:#2a2a2a;
 }
@@ -18,7 +23,7 @@ body{
 }
 
 .navbar-custom li>a:hover,.navbar-custom li>a:focus {
-	background-color:##2a2a2a;
+	background-color:#2a2a2a;
     color:#f1f1f1;
 }
 
