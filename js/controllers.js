@@ -7,7 +7,7 @@ angular.module('App.controllers', [])
         // call factory to retrieve place nearby
         serviceMap.getPlaces(1.300529,103.861990,3000).success(function(data){
 
-          if(data.length == 4){
+          if(data.length >= 4){
           console.log(data[0].doc.photos[0].path);
 
           $scope.pointOfInterests = [
