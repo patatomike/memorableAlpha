@@ -5,7 +5,9 @@ angular.module('App.controllers', [])
 
 
         // call factory to retrieve place nearby
-        serviceMap.getPlaces(1.300529,103.861990,2500).success(function(data){
+        serviceMap.getPlaces(1.300529,103.861990,3000).success(function(data){
+
+          if(data.length == 4){
           console.log(data[0].doc.photos[0].path);
 
           $scope.pointOfInterests = [
@@ -14,6 +16,16 @@ angular.module('App.controllers', [])
                 { img: 'https://s3-us-west-1.amazonaws.com/memorable/'+data[2].doc.photos[0].path, distance: '100m', direction: 'SW' },
                 { img: 'https://s3-us-west-1.amazonaws.com/memorable/'+data[3].doc.photos[0].path, distance: '500m', direction: 'SE' }
               ];
+
+          }else{
+            $scope.pointOfInterests = [
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/buddha_tooth_relic_temple_and_museum.jpg', distance: '200m', direction: 'NW' },
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/merlion_park.jpg', distance: '600m', direction: 'NE' },
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/chinatown_singapore.jpg', distance: '100m', direction: 'SW' },
+              { img: 'https://s3-us-west-1.amazonaws.com/memorable/marina_bay_sands.jpg', distance: '500m', direction: 'SE' }
+            ];
+
+          }
 
 
 
