@@ -9,16 +9,18 @@ angular.module('App.controllers', [])
               { img: 'https://s3-us-west-1.amazonaws.com/memorable/merlion_park.jpg', distance: '500m', direction: 'SE' }
             ];
 
-        // // call factory to retrieve place nearby
-        // serviceMap.getPlaces(1.300529,103.861990,2000).success(function(data){
-        //   console.log(data);
-        //
-        //   // for (var i = 0; i < data.length; i++) {
-        //   //   // data[i].distance
-        //   //   // markers.push(createMarker(data[i].latitude, data[i].longitude, data[i].place, i));
-        //   //   // //  places.push(data[i].place)
-        //   // }
-        // });
+        // call factory to retrieve place nearby
+        serviceMap.getPlaces(1.300529,103.861990,2500).success(function(data){
+          console.log(data[0].doc[0].photos[0].path);
+
+
+
+          // for (var i = 0; i < data.length; i++) {
+          //   // data[i].distance
+          //   // markers.push(createMarker(data[i].latitude, data[i].longitude, data[i].place, i));
+          //   // //  places.push(data[i].place)
+          // }
+        });
 
 
         var map = new google.maps.Map(document.getElementById('map'), {
