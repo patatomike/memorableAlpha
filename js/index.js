@@ -45,7 +45,9 @@ var app = {
 
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 12,
-            center: {lat: 1.290299, lng: 103.850143}
+            center: {lat: 1.290299, lng: 103.850143},
+            streetViewControl: false,
+            disableDefaultUI: true
           });
 
         var transitLayer = new google.maps.TransitLayer();
