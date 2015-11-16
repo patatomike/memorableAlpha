@@ -1,5 +1,5 @@
 angular.module('App.controllers', [])
-    .controller('PointOfInterestsController', ['$scope', function ($scope, serviceMap,$http) {
+    .controller('PointOfInterestsController', ['$scope', '$http', function ($scope, serviceMap,$http) {
         $scope.status = "It works!";
 
         // call factory to retrieve place nearby
