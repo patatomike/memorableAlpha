@@ -1,0 +1,25 @@
+<div class="container" id="main">
+    <!-- PhotoZone START -->
+    <div class="row">
+            <!-- item list -->
+            <div class="col-xs-6 nopadding" ng-repeat="poi in pointOfInterests">
+                <img class="img-responsive" ng-src="{{poi.img}}" />
+            </div>
+            <!-- /item list -->
+    </div>
+    <!-- PhotoZone END -->
+
+    <!--  Map Canvas START -->
+    <div class="row">
+
+            <!--map-canvas will be postioned here
+            <div id="map-canvas"></div>-->
+            <div id="map" class="map_container">
+            </div>
+               <!-- <google-map center="map.center" zoom="map.zoom" draggable="true" options="map.options" >
+               </google-map> -->
+           </div>
+
+    </div>
+    <!--  Map Canvas END -->
+</div>

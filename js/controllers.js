@@ -90,4 +90,18 @@ angular.module('App.controllers', [])
     })
     .controller('ViewCtrl', ['$scope', function ($scope) {
         $scope.status = "Also totally works!";
+    }])
+    .controller('LocationController', ['$scope', function ($scope) {
+      $scope.switchToCategories = function(){
+            $location.path('/categories'); // path not hash
+        };
+    }])
+    .controller('CategoriesController', ['$scope', function ($scope) {
+        $scope.status = "Also totally works!";
+    }])
+    .controller('PlacesController', ['$scope', function ($scope) {
+        $scope.status = "Also totally works!";
+    }])
+    .controller('DetailPlaceController', ['$scope', function ($scope) {
+        $scope.status = "Also totally works!";
     }]);

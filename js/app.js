@@ -5,13 +5,29 @@ angular.module('App', ['ngRoute', 'App.services', 'App.controllers'])
      }])
     .config(function ($routeProvider) {
         $routeProvider
-        .when('/', {
-            controller: 'PointOfInterestsController',
+      /*.when('/', {
+           controller: 'PointOfInterestsController',
             templateUrl: 'partials/memorableNOW.html'
+        })*/
+        .when('/', {
+            controller: 'LocationController',
+            templateUrl: 'partials/location.html'
         })
         .when('/live', {
             controller: 'PointOfInterestsController',
             templateUrl: 'partials/memorableLIVE.html'
+        })
+        .when('/categories', {
+            controller: 'CategoriesController',
+            templateUrl: 'partials/categories.html'
+        })
+        .when('/places', {
+            controller: 'PlacesController',
+            templateUrl: 'partials/places.html'
+        })
+        .when('/detailPlace', {
+            controller: 'DetailPlaceController',
+            templateUrl: 'partials/detail.html'
         })
         .otherwise({redirectTo: '/'});
     });

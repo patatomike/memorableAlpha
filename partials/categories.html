@@ -1,0 +1,21 @@
+<div class="container" id="main">
+    <!-- categories START -->
+    <div class="row">
+
+      <!-- Temporary button> -->
+        //buton here
+        <div ng-click="switchToPlaces()">
+          go to places
+        </div>
+            <!-- item list -->
+            <div class="col-xs-6 nopadding" ng-repeat="cat in categories">
+              <div class="categoryTile">
+                <img class="img-responsive" ng-src="{{cat.icon}}" />
+                <div class="categoryName"> {{cat.name}} </div>
+              </div>
+            </div>
+            <!-- /item list -->
+    </div>
+    <!-- categories END -->
+
+</div>

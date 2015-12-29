@@ -1,0 +1,14 @@
+<div class="container" id="main">
+    <!-- places START -->
+    <div class="row">
+            <!-- item list -->
+            <div class="col-xs-12 nopadding" ng-repeat="pla in Places">
+              <div class="placeContainer">
+                <img class="img-responsive placeImg" ng-src="{{pla.img}}" />
+                <div class="placeName"> {{pla.name}}></div>
+              </div>
+            </div>
+            <!-- /item list -->
+    </div>
+    <!-- places END -->
+</div>
