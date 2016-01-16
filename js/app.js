@@ -1,4 +1,4 @@
-angular.module('App', ['ngRoute', 'App.services', 'App.controllers'])
+angular.module('App', ['ngRoute', 'App.services', 'App.controllers', 'ngTouch'])
       .config(['$compileProvider', function ($compileProvider) {
         //  $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel|chrome-extension):/);
          $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|http|ftp|mailto|file|tel|chrome-extension):/); // ***newwer version

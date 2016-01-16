@@ -23,7 +23,7 @@ angular.module('App.services', [])
           getPlaces: function(latitude,longitude,distance){
               return $http.get("https://memorablebackend.herokuapp.com/api/places/"+latitude+"/"+longitude+"/"+distance);
           }
-      }
+      };
     })
     .factory('MarkerCreatorService', function () {
 
